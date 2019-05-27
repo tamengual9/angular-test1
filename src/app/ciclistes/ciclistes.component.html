@@ -1,0 +1,25 @@
+<h2>PRIMERES PROVES...</h2>
+
+
+<p>{{cicl.id}} - {{cicl.nom}} - {{cicl.llinatge}}</p>
+<input [(ngModel)]="cicl.nom" placeholder="name of ciclista" />
+
+
+<h2>lA LLISTA DE CICLISTES:</h2>
+<ul>
+    <!-- xtoni iteracio -->
+    <li *ngFor="let fila of lcs" 
+        (click)="onSelect(fila)"
+        [class.selected]="fila === fitxa"    
+    >
+        {{fila.nom}} {{fila.llinatge}} té el dorsal {{fila.id}}
+    </li>
+</ul>
+
+<div *ngIf="fitxa">
+    <h2>FITXA DEL CICLISTA SOBRE EL QUE HAS CLICAT:</h2>
+
+    <h3>{{fitxa.nom}} {{fitxa.llinatge | uppercase}} </h3>
+    <p>Puc anar canviant els llinatges dels ciclistes així com els vaig seleccionant....</p>
+    <input [(ngModel)]="fitxa.llinatge" placeholder="aixo es el placeholder">
+</div>
