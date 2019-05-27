@@ -1,3 +1,10 @@
 li.selected  {
     color:red;
 }
+
+.llista {
+    background-color: bisque;
+}
+.fitxa {
+    background-color: aquamarine;
+}

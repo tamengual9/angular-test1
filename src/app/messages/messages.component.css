@@ -1,0 +1,8 @@
+.box_messages {
+    display:flex;
+    flex-flow: column;
+
+    background-color: lightgray;
+    border: 1px solid black;
+}
+

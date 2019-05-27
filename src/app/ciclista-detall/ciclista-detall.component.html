@@ -1,0 +1,11 @@
+<div *ngIf="ciclista">
+
+  <h2>{{ciclista.nom | uppercase}} Details</h2>
+  <div><span>Dorsal: </span>{{ciclista.id}}</div>
+  <div>
+    <label>llinatge:
+      <input [(ngModel)]="ciclista.llinatge" placeholder="aixo es un placeholder" />
+    </label>
+  </div>
+
+</div>
