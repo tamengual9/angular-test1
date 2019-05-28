@@ -5,4 +5,5 @@ export class Ciclista {
     id: number;
     nom: string;
     llinatge:string;
+    equip:string;
   }
