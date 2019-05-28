@@ -26,7 +26,7 @@ export class CiclistaService {
   // }
 
 
-  //Introduim els observables
+  //xtoni  Introduim els Observables
   getCiclistes(): Observable<Ciclista[]> {
 
     var d = new Date();
@@ -39,5 +39,12 @@ export class CiclistaService {
   //Codi creat per jo - pq mostri missatge en clicar en un ciclista
   selectedACyclist():void {
     this.serveiDeMissatges.add('Acabes de clicar sobre un ciclista');
+  }
+
+
+  getCiclistaById(id: number): Observable<Ciclista> {
+    // TODO: send the message _after_ fetching the hero
+    // this.messageService.add(`HeroService: fetched hero id=${id}`);  //xtoni   pdt  posar els missatges al bottom!!!
+    return of(CICLISTES.find(ciclista => ciclista.id === id));
   }
 }

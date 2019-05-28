@@ -1,0 +1,29 @@
+ul {
+    display:flex;
+}
+
+li {
+    padding-left: none;
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid black;
+    cursor:pointer;
+}
+
+li div:first-child {
+    background-color:white;
+}
+
+li:hover {
+    background-color:goldenrod;
+}
+
+li.selected  {
+    color:red;
+    background-color: lightblue;
+}
+
+.llista {
+    background-color: bisque;
+}

@@ -1,11 +1,15 @@
+Ciclista Detall component!!!
+
+
 <div *ngIf="ciclista">
-
-  <h2>{{ciclista.nom | uppercase}} Details</h2>
-  <div><span>Dorsal: </span>{{ciclista.id}}</div>
-  <div>
-    <label>llinatge:
-      <input [(ngModel)]="ciclista.llinatge" placeholder="aixo es un placeholder" />
-    </label>
-  </div>
-
+  <ul>
+    <li>Dorsal: {{ciclista.id}} </li>
+    <li>Nom: {{ciclista.nom}} </li>
+    <li>Llinatge: {{ciclista.llinatge}} </li>
+    <li>Equip: {{ciclista.equip | uppercase}} </li>
+    <div><span>Dorsal: </span>{{ciclista.id}}</div>
+  </ul>
 </div>
+
+<br>
+<a class="backlink" (click)="goBack()">Go Back</a>

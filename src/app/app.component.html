@@ -1,11 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>  {{title | uppercase}} </h1>
+  <h1> {{title | uppercase}} </h1>
 </div>
-
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/ciclistes">Heroes</a>
+</nav>
 <!-- Show the component 'ciclista'-->
 <!-- NOTA:  React també fa coses d'aquestes !!! -->
-<app-ciclistes></app-ciclistes>
+<!-- OCULTO QUAN INTRODUEIXO EL ROUTING SEGONS TUTORIAL HEROES -->
+<!-- <app-ciclistes></app-ciclistes> -->
 
 <!-- //mostrar missatges -->
-<app-messages></app-messages>
+<!-- OCULTO QUAN INTRODUEIXO EL ROUTING SEGONS TUTORIAL HEROES -->
+<!-- <app-messages></app-messages> -->
+
+
+<!-- PROVISIONAL -->
+<!-- <app-dashboard></app-dashboard> -->
+
+<br><br>
+<h2>ROUTER OUTLET</h2>
+<div class="routeroutlet">
+
+  <!-- Aixo vol dir que les rutes a les que naveguem se mostraran aqui - era igual al model MVC -->
+  <router-outlet></router-outlet>
+
+</div>

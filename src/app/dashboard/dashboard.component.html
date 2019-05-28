@@ -1,0 +1,22 @@
+<br>
+<ul class="llista">
+    <!-- xtoni iteracio -->
+    <li *ngFor="let fila of lcs" [class.selected]="fila === fitxa">
+        <div (click)="onSelect(fila)" >
+            {{fila.nom}} {{fila.llinatge}} 
+            <p>{{fila.id}}</p>
+        </div>
+        <p><a routerLink="/detall/{{fila.id}}">Visita Fitxa</a></p>
+    </li>
+</ul>
+
+<div class="fitxa" *ngIf="fitxa">
+    <h3>{{fitxa.nom}} {{fitxa.llinatge | uppercase}}
+        <input [(ngModel)]="fitxa.llinatge" placeholder="aixo es el placeholder">
+    </h3>
+</div>
+
+
+<!-- Show the component 'Ciclista Detall-->
+<!-- <app-ciclista-detall [ciclista]="fitxa"></app-ciclista-detall> -->
+<!-- mes info sobre aquest binding, https://angular.io/tutorial/toh-pt3#add-the-input-hero-property-->
