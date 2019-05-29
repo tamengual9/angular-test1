@@ -1,4 +1,5 @@
 .box_messages {
+    overflow-y: visible;
     display:flex;
     flex-flow: column;
 

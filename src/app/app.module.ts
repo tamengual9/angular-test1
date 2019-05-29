@@ -26,9 +26,13 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
     CiclistaDetallComponent,
     MessagesComponent,
     DashboardComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,       //<-- xtoni  per a q funcioni  [(ngModel)]
+    AppRoutingModule,   //Routing 
 
     HttpClientModule,
-
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -36,13 +40,6 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
       InMemoryDataService, { dataEncapsulation: false }
     )
 
-
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,       //<-- xtoni  per a q funcioni  [(ngModel)]
-    HttpClientModule,
-    AppRoutingModule   //Routing 
   ],
   providers: [],
   bootstrap: [AppComponent]
