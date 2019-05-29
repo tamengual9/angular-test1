@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 //xtoni  per a que funcioni  [(ngModel)]
 import { FormsModule } from '@angular/forms';
 
+//http
+import { HttpClientModule }    from '@angular/common/http';
+
+
 import { CiclistesComponent } from './ciclistes/ciclistes.component';
 import { CiclistaDetallComponent } from './ciclista-detall/ciclista-detall.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -23,11 +27,9 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AppRoutingModule   //<-- xtoni  per a q funcioni  [(ngModel)]
-
-    //Routing
-    
+    FormsModule,       //<-- xtoni  per a q funcioni  [(ngModel)]
+    HttpClientModule,
+    AppRoutingModule   //Routing 
   ],
   providers: [],
   bootstrap: [AppComponent]
