@@ -1,8 +1,9 @@
   import { Injectable } from '@angular/core';
   //Import the Hero and HEROES.
   import { Ciclista } from './ciclista';
-  import { CICLISTES } from './array_ciclistes';
-  //Observable
+/*   import { CICLISTES } from './array_ciclistes';
+ */  
+//Observable
   import { Observable, of } from 'rxjs';
   //Messages
   import { MessageService } from './message.service';
@@ -35,9 +36,8 @@ export class CiclistaService {
 
                   //xtoni  Introduim els Observables
   getCiclistes(): Observable<Ciclista[]> {
-    var d = new Date();
     // xtoni TODO: send the message _after_ fetching the heroes
-    this.serveiDeMissatges.add('CiclistaService: acaba de recuperar 1 Ciclista'+d);
+    this.serveiDeMissatges.add('CiclistaService: acaba de recuperar 1 Ciclista');
 
  //   return of(CICLISTES);
     return this.http.get<Ciclista[]>(this.ciclistesUrl)
@@ -52,7 +52,7 @@ export class CiclistaService {
 
   getCiclistaById(id: number): Observable<Ciclista> {
     // TODO: send the message _after_ fetching the hero
-    // this.messageService.add(`HeroService: fetched hero id=${id}`);  //xtoni   pdt  posar els missatges al bottom!!!
+    this.serveiDeMissatges.add(`No puc tornar el ciclista id=${id} pq me falta acabar el tutorial HTTP de Angular`);
     return of(CICLISTES.find(ciclista => ciclista.id === id));
   }
 
