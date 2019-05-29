@@ -14,7 +14,7 @@ import { CiclistaService } from '../ciclista.service';  // <-- NOU: Serveis
 export class CiclistesComponent implements OnInit 
 {
   // (test) Property
-  cicl: Ciclista = {  id: 1, nom: 'Primoz', llinatge: 'Rogliz' };
+  cicl: Ciclista = {  id: 1, nom: 'Primoz', llinatge: 'Rogliz', equip: 'Rogliz' };
 
 
   //xtoni  Modificat per afegir el constructor  (XTONI -> Traplantant al component DASHBOARD ! )
